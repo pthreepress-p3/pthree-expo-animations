@@ -10,14 +10,7 @@ export const useAttractTimeline = () => {
 
   if (!masterTimeline.current) {
     masterTimeline.current = gsap.timeline({
-      paused: false,
-      onComplete: () => {
-        console.log("Timeline finished, executing hard reload!");
-        if (isMaster && channel) {
-          channel.postMessage({ type: 'RELOAD' });
-        }
-        setTimeout(() => window.location.reload(), 100);
-      }
+      paused: false
     });
     // Force the timeline to be exactly totalDuration seconds long
     masterTimeline.current.set({}, {}, expoData.timings.totalDuration);
@@ -85,6 +78,16 @@ export const useAttractTimeline = () => {
         };
         setSyncState(payload);
         channel.postMessage({ type: 'SYNC_STATE', payload });
+      }
+
+      // Handle hard reload at the very end of the timeline
+      if (isMaster && time >= t.totalDuration - 0.1) {
+        if (!window.__hasReloaded) {
+          window.__hasReloaded = true;
+          console.log("Timeline reached end. Broadcasting RELOAD and refreshing.");
+          channel.postMessage({ type: 'RELOAD' });
+          setTimeout(() => window.location.reload(), 200);
+        }
       }
     });
 
