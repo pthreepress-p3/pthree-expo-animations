@@ -15,4 +15,3 @@ This is a premium, full-screen React animation experience for PTHREE, designed t
 
 - **Real PTHREE Logo:** Place `pthree-logo.svg` in `/public/` and update `src/components/LogoReveal.jsx`.
 - **Demo QR Code:** Place `pthree-demo-qr.png` in `/public/` and update `src/components/RoiCtaScene.jsx`.
-,
