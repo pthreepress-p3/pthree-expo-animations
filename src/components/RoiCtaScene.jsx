@@ -63,16 +63,15 @@ const RoiCtaScene = ({ tl }) => {
           borderRadius: '16px',
           boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
         }}>
-          {/* REPLACE WITH REAL QR CODE */}
-          <div style={{
-            width: '240px', height: '240px', 
-            border: '3px dashed #00aeef', 
-            display: 'flex', justifyContent: 'center', alignItems: 'center', 
-            color: '#00aeef', fontSize: '1.2rem', fontWeight: 'bold', textAlign: 'center',
-            borderRadius: '12px'
-          }}>
-            SCAN FOR<br/>LIVE DEMO
-          </div>
+          <img 
+            src="/Pthree_press.jpeg" 
+            alt="Scan for Live Demo" 
+            style={{
+              width: '240px', height: '240px', 
+              borderRadius: '12px',
+              objectFit: 'contain'
+            }} 
+          />
         </div>
         
         <div style={{fontSize: '2rem', color: 'var(--color-text-muted)', textAlign: 'center', whiteSpace: 'pre-line', fontWeight: '600'}}>

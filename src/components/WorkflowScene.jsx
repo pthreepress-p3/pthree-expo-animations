@@ -10,7 +10,7 @@ const WorkflowScene = ({ tl }) => {
   
   const numItems = expoData.scene3.workflowStages.length;
   const anglePerItem = 360 / numItems;
-  const radius = 35; // vh
+  const radius = 28; // vh
   
   useLayoutEffect(() => {
     if (!tl || !tl.current) return;
