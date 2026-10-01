@@ -2,7 +2,7 @@
 
 This is a premium, full-screen React animation experience for PTHREE, designed to run continuously on a TV placed outside an expo stall.
 
-## Setup Instructions
+## Setup Instructions.
 
 1. `npm install`
 2. `npm run dev`
