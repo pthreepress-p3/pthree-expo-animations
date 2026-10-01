@@ -92,7 +92,7 @@ export const expoData = {
 
   scene7: {
     mainText: "Potential Business Value Influenced",
-    roiValue: "1.6% – 4.2%",
+    roiValue: "2.3% – 5.5%",
     roiSub: "OF ANNUAL TURNOVER*",
     benefits: [
       "Material Optimisation",
