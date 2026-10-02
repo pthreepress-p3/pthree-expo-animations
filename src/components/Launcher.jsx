@@ -47,6 +47,11 @@ const Launcher = () => {
           Open Slave Mirror
         </button>
       </div>
+      <div style={{ marginTop: '20px' }}>
+        <button onClick={() => window.open('/experience', '_blank')} style={{ padding: '15px 30px', background: 'linear-gradient(90deg, #ec008c, #00aeef)', color: '#fff', border: 'none', borderRadius: '8px', cursor: 'pointer', fontSize: '1.2rem', fontWeight: 'bold' }}>
+          Open Exp PTHREE
+        </button>
+      </div>
     </div>
   );
 };

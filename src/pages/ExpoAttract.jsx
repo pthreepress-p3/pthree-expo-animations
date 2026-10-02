@@ -7,6 +7,7 @@ import WhyPthreeScene from '../components/WhyPthreeScene';
 import PlatformScene from '../components/PlatformScene';
 import IntegrationsScene from '../components/IntegrationsScene';
 import RoiCtaScene from '../components/RoiCtaScene';
+import ExperienceScene from '../components/ExperienceScene';
 import ExpoControls from '../components/ExpoControls';
 import HalftoneBackground from '../components/HalftoneBackground';
 import InkParticleField from '../components/InkParticleField';
@@ -58,6 +59,7 @@ const ExpoAttract = () => {
       <PlatformScene tl={masterTimeline} />
       <IntegrationsScene tl={masterTimeline} />
       <RoiCtaScene tl={masterTimeline} />
+      <ExperienceScene tl={masterTimeline} />
       
       <ExpoControls isVisible={controlsVisible} />
     </div>

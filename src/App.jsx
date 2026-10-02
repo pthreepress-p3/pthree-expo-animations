@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Launcher from './components/Launcher';
 import ExpoAttract from './pages/ExpoAttract';
 import TvView from './pages/TvView';
+import ExperienceScene from './components/ExperienceScene';
 import { ExpoSyncProvider } from './context/ExpoSyncContext';
 import './styles/global.css';
 
@@ -41,6 +42,10 @@ function App() {
             </ExpoSyncProvider>
           } 
         />
+        
+        {/* Standalone Experience PTHREE page */}
+        <Route path="/experience" element={<ExperienceScene isStandalone={true} />} />
+        
       </Routes>
     </Router>
   );

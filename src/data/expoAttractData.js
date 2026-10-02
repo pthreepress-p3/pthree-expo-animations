@@ -1,13 +1,14 @@
 export const expoData = {
   timings: {
-    totalDuration: 205,
+    totalDuration: 201,
     scene1: { start: 0, end: 16 },
     scene2: { start: 16, end: 32 },
     scene3: { start: 32, end: 148 },
     scene4: { start: 148, end: 162 },
     scene5: { start: 162, end: 172 },
     scene6: { start: 172, end: 181 },
-    scene7: { start: 181, end: 205 },
+    scene7: { start: 181, end: 191 },
+    scene8: { start: 191, end: 201 },
   },
   
   scene1: {
@@ -104,5 +105,21 @@ export const expoData = {
     ctaSub: "Scan for a Live Demo\npthree.press",
     footerContact: "Powered by Lama Code Technologies\ninfo@lamacodetech.in",
     disclaimer: "*Indicative potential impact, not guaranteed savings or profit.\nActual results vary by business scale, processes and PTHREE adoption."
+  },
+
+  scene8: {
+    headline: "Experience",
+    mainText: "PTHREE",
+    subHeadline: "BRING US YOUR TOUGHEST WORKFLOW",
+    subText: "onto one connected platform.",
+    footerText1: "Connect your people. Control your workflow.",
+    footerText2: "Understand your business. Grow with confidence.",
+    cta: "CONNECT WITH US",
+    contact: {
+      phone: "+91 9187925205",
+      website: "pthree.press",
+      email: "info@lamacodetech.in",
+      address: "1st Block, No 495/B, 15th Main Rd,\nWest Of Chord Road, 3rd Stage,\nBasaveshwar Nagar, Bengaluru -\n560079, Karnataka , INDIA"
+    }
   }
 };
