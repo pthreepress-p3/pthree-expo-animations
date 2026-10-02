@@ -63,10 +63,10 @@ const ExperienceScene = ({ tl, isStandalone = false }) => {
               50% { opacity: 0.5; filter: blur(30px); }
               100% { opacity: 0.3; filter: blur(20px); }
             }
-            @keyframes textWave {
-              0% { transform: translateY(0px); }
-              50% { transform: translateY(-8px); }
-              100% { transform: translateY(0px); }
+            @keyframes gradientWave {
+              0% { background-position: 0% center; }
+              50% { background-position: 100% center; }
+              100% { background-position: 0% center; }
             }
           `}
         </style>
@@ -94,10 +94,12 @@ const ExperienceScene = ({ tl, isStandalone = false }) => {
           rel="noopener noreferrer"
           style={{ textAlign: 'center', margin: 'auto', cursor: 'pointer', textDecoration: 'none', color: 'inherit', position: 'relative', zIndex: 100, pointerEvents: 'auto' }}
         >
-          <div style={{ animation: 'textWave 3s infinite ease-in-out', display: 'inline-block' }}>
+          <div style={{ display: 'inline-block' }}>
             <h2 style={{ 
               fontSize: '3rem', fontWeight: 600, margin: '0 0 10px 0', letterSpacing: '2px',
               background: 'linear-gradient(90deg, #9ca3af 0%, #ffffff 50%, #9ca3af 100%)',
+              backgroundSize: '200% auto',
+              animation: 'gradientWave 4s linear infinite',
               WebkitBackgroundClip: 'text',
               backgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -109,6 +111,8 @@ const ExperienceScene = ({ tl, isStandalone = false }) => {
               fontSize: '9rem', fontWeight: 900, margin: '0 0 30px 0', 
               letterSpacing: '5px', lineHeight: 1,
               background: 'linear-gradient(90deg, #6b7280 0%, #ffffff 50%, #6b7280 100%)',
+              backgroundSize: '200% auto',
+              animation: 'gradientWave 4s linear infinite',
               WebkitBackgroundClip: 'text',
               backgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
