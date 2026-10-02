@@ -63,6 +63,11 @@ const ExperienceScene = ({ tl, isStandalone = false }) => {
               50% { opacity: 0.6; transform: scale(1.05) translateY(-20px); filter: blur(30px); }
               100% { opacity: 0.3; transform: scale(1) translateY(0px); filter: blur(20px); }
             }
+            @keyframes textPulseGlow {
+              0% { text-shadow: 0 0 10px rgba(255,255,255,0.2); transform: scale(1); }
+              50% { text-shadow: 0 0 30px rgba(255,255,255,0.6); transform: scale(1.02); }
+              100% { text-shadow: 0 0 10px rgba(255,255,255,0.2); transform: scale(1); }
+            }
           `}
         </style>
       </div>
@@ -87,17 +92,19 @@ const ExperienceScene = ({ tl, isStandalone = false }) => {
           style={{ textAlign: 'center', margin: 'auto', cursor: 'pointer' }}
           onClick={() => window.location.href = 'https://pthree-press.vercel.app'}
         >
-          <h2 style={{ fontSize: '3rem', fontWeight: 600, margin: '0 0 10px 0', letterSpacing: '2px' }}>
-            {expoData.scene8.headline}
-          </h2>
-          <h1 style={{ 
-            fontSize: '9rem', fontWeight: 900, margin: '0 0 30px 0', 
-            letterSpacing: '5px', lineHeight: 1 
-          }}>
-            {expoData.scene8.mainText}
-          </h1>
+          <div style={{ animation: 'textPulseGlow 4s infinite ease-in-out', display: 'inline-block' }}>
+            <h2 style={{ fontSize: '3rem', fontWeight: 600, margin: '0 0 10px 0', letterSpacing: '2px' }}>
+              {expoData.scene8.headline}
+            </h2>
+            <h1 style={{ 
+              fontSize: '9rem', fontWeight: 900, margin: '0 0 30px 0', 
+              letterSpacing: '5px', lineHeight: 1 
+            }}>
+              {expoData.scene8.mainText}
+            </h1>
+          </div>
           
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '20px', marginBottom: '10px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '20px', marginBottom: '10px', marginTop: '10px' }}>
             <div style={{ height: '3px', width: '30px', background: '#00aeef' }}></div>
             <div style={{ height: '3px', width: '30px', background: '#fff200' }}></div>
             <div style={{ height: '3px', width: '30px', background: '#ec008c' }}></div>
@@ -109,18 +116,6 @@ const ExperienceScene = ({ tl, isStandalone = false }) => {
           <p style={{ fontSize: '1.6rem', margin: 0, fontWeight: 300 }}>
             {expoData.scene8.subText}
           </p>
-          
-          <div style={{ marginTop: '50px', fontSize: '1.3rem', color: '#cbd5e1', fontWeight: 300 }}>
-            <p style={{ margin: '5px 0' }}>{expoData.scene8.footerText1}</p>
-            <p style={{ margin: '5px 0' }}>{expoData.scene8.footerText2}</p>
-          </div>
-          
-          <div style={{ 
-            marginTop: '40px', fontSize: '1.2rem', fontWeight: 700, letterSpacing: '4px',
-            color: '#fff'
-          }}>
-            {expoData.scene8.cta}
-          </div>
         </div>
       </div>
     </div>
