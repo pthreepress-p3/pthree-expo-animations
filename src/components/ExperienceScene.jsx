@@ -99,7 +99,9 @@ const ExperienceScene = ({ tl, isStandalone = false }) => {
               fontSize: '3rem', fontWeight: 600, margin: '0 0 10px 0', letterSpacing: '2px',
               background: 'linear-gradient(90deg, #9ca3af 0%, #ffffff 50%, #9ca3af 100%)',
               WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
+              backgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              color: 'transparent'
             }}>
               {expoData.scene8.headline}
             </h2>
@@ -108,8 +110,9 @@ const ExperienceScene = ({ tl, isStandalone = false }) => {
               letterSpacing: '5px', lineHeight: 1,
               background: 'linear-gradient(90deg, #6b7280 0%, #ffffff 50%, #6b7280 100%)',
               WebkitBackgroundClip: 'text',
+              backgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
-              textShadow: '0 10px 30px rgba(255,255,255,0.1)'
+              color: 'transparent'
             }}>
               {expoData.scene8.mainText}
             </h1>
