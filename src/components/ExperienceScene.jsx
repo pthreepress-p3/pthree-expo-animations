@@ -59,14 +59,14 @@ const ExperienceScene = ({ tl, isStandalone = false }) => {
         <style>
           {`
             @keyframes blaze {
-              0% { opacity: 0.3; transform: scale(1) translateY(0px); filter: blur(20px); }
-              50% { opacity: 0.6; transform: scale(1.05) translateY(-20px); filter: blur(30px); }
-              100% { opacity: 0.3; transform: scale(1) translateY(0px); filter: blur(20px); }
+              0% { opacity: 0.3; filter: blur(20px); }
+              50% { opacity: 0.5; filter: blur(30px); }
+              100% { opacity: 0.3; filter: blur(20px); }
             }
-            @keyframes textPulseGlow {
-              0% { text-shadow: 0 0 10px rgba(255,255,255,0.2); transform: scale(1); }
-              50% { text-shadow: 0 0 30px rgba(255,255,255,0.6); transform: scale(1.02); }
-              100% { text-shadow: 0 0 10px rgba(255,255,255,0.2); transform: scale(1); }
+            @keyframes textWave {
+              0% { transform: translateY(0px); }
+              50% { transform: translateY(-8px); }
+              100% { transform: translateY(0px); }
             }
           `}
         </style>
@@ -94,13 +94,22 @@ const ExperienceScene = ({ tl, isStandalone = false }) => {
           rel="noopener noreferrer"
           style={{ textAlign: 'center', margin: 'auto', cursor: 'pointer', textDecoration: 'none', color: 'inherit', position: 'relative', zIndex: 100, pointerEvents: 'auto' }}
         >
-          <div style={{ animation: 'textPulseGlow 4s infinite ease-in-out', display: 'inline-block' }}>
-            <h2 style={{ fontSize: '3rem', fontWeight: 600, margin: '0 0 10px 0', letterSpacing: '2px' }}>
+          <div style={{ animation: 'textWave 3s infinite ease-in-out', display: 'inline-block' }}>
+            <h2 style={{ 
+              fontSize: '3rem', fontWeight: 600, margin: '0 0 10px 0', letterSpacing: '2px',
+              background: 'linear-gradient(90deg, #ffffff 0%, #d1d5db 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent'
+            }}>
               {expoData.scene8.headline}
             </h2>
             <h1 style={{ 
               fontSize: '9rem', fontWeight: 900, margin: '0 0 30px 0', 
-              letterSpacing: '5px', lineHeight: 1 
+              letterSpacing: '5px', lineHeight: 1,
+              background: 'linear-gradient(90deg, #ffffff 0%, #e2e8f0 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              textShadow: '0 10px 30px rgba(255,255,255,0.1)'
             }}>
               {expoData.scene8.mainText}
             </h1>
