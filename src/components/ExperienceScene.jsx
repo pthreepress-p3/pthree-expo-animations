@@ -88,9 +88,11 @@ const ExperienceScene = ({ tl, isStandalone = false }) => {
         </div>
         
         {/* Center Main Text */}
-        <div 
-          style={{ textAlign: 'center', margin: 'auto', cursor: 'pointer' }}
-          onClick={() => window.location.href = 'https://pthree-press.vercel.app'}
+        <a 
+          href="https://pthree-press.vercel.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textAlign: 'center', margin: 'auto', cursor: 'pointer', textDecoration: 'none', color: 'inherit', position: 'relative', zIndex: 100, pointerEvents: 'auto' }}
         >
           <div style={{ animation: 'textPulseGlow 4s infinite ease-in-out', display: 'inline-block' }}>
             <h2 style={{ fontSize: '3rem', fontWeight: 600, margin: '0 0 10px 0', letterSpacing: '2px' }}>
@@ -116,7 +118,7 @@ const ExperienceScene = ({ tl, isStandalone = false }) => {
           <p style={{ fontSize: '1.6rem', margin: 0, fontWeight: 300 }}>
             {expoData.scene8.subText}
           </p>
-        </div>
+        </a>
       </div>
     </div>
   );
