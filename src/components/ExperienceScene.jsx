@@ -83,7 +83,10 @@ const ExperienceScene = ({ tl, isStandalone = false }) => {
         </div>
         
         {/* Center Main Text */}
-        <div style={{ textAlign: 'center', marginBottom: 'auto' }}>
+        <div 
+          style={{ textAlign: 'center', margin: 'auto', cursor: 'pointer' }}
+          onClick={() => window.location.href = 'https://pthree-press.vercel.app'}
+        >
           <h2 style={{ fontSize: '3rem', fontWeight: 600, margin: '0 0 10px 0', letterSpacing: '2px' }}>
             {expoData.scene8.headline}
           </h2>
@@ -118,47 +121,6 @@ const ExperienceScene = ({ tl, isStandalone = false }) => {
           }}>
             {expoData.scene8.cta}
           </div>
-        </div>
-
-        {/* Footer Details */}
-        <div style={{ 
-          display: 'grid', gridTemplateColumns: '1fr 1fr 1.5fr auto', gap: '40px',
-          borderTop: '1px solid rgba(255,255,255,0.2)', paddingTop: '30px',
-          alignItems: 'start'
-        }}>
-          <div>
-            <div style={{ fontSize: '0.9rem', color: '#00aeef', fontWeight: 700, letterSpacing: '2px', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <span style={{width: '3px', height: '12px', background: '#00aeef'}}></span> LET'S TALK
-            </div>
-            <div style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '5px' }}>{expoData.scene8.contact.phone}</div>
-            <div style={{ fontSize: '1.2rem', color: '#00aeef', fontWeight: 600 }}>{expoData.scene8.contact.website}</div>
-          </div>
-          
-          <div>
-            <div style={{ fontSize: '0.9rem', color: '#fff200', fontWeight: 700, letterSpacing: '2px', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <span style={{width: '3px', height: '12px', background: '#fff200'}}></span> WRITE TO US
-            </div>
-            <div style={{ fontSize: '1.1rem', color: '#cbd5e1' }}>{expoData.scene8.contact.email}</div>
-          </div>
-          
-          <div>
-            <div style={{ fontSize: '0.9rem', color: '#ec008c', fontWeight: 700, letterSpacing: '2px', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <span style={{width: '3px', height: '12px', background: '#ec008c'}}></span> VISIT US
-            </div>
-            <div style={{ fontSize: '1.1rem', color: '#cbd5e1', whiteSpace: 'pre-line', lineHeight: 1.5 }}>
-              {expoData.scene8.contact.address}
-            </div>
-          </div>
-          
-          <div style={{ background: '#fff', padding: '10px' }}>
-            <img src="/Pthree_press.jpeg" alt="QR Code" style={{ width: '120px', height: '120px', objectFit: 'contain' }} />
-          </div>
-        </div>
-        
-        {/* Very bottom text */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px', fontSize: '0.9rem', color: '#64748b' }}>
-          <div>PTHREE | PRINT AUTOMATION SIMPLIFIED</div>
-          <div>20</div>
         </div>
       </div>
     </div>
