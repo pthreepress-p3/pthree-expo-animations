@@ -97,7 +97,7 @@ const ExperienceScene = ({ tl, isStandalone = false }) => {
           <div style={{ animation: 'textWave 3s infinite ease-in-out', display: 'inline-block' }}>
             <h2 style={{ 
               fontSize: '3rem', fontWeight: 600, margin: '0 0 10px 0', letterSpacing: '2px',
-              background: 'linear-gradient(90deg, #ffffff 0%, #d1d5db 100%)',
+              background: 'linear-gradient(90deg, #9ca3af 0%, #ffffff 50%, #9ca3af 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
             }}>
@@ -106,7 +106,7 @@ const ExperienceScene = ({ tl, isStandalone = false }) => {
             <h1 style={{ 
               fontSize: '9rem', fontWeight: 900, margin: '0 0 30px 0', 
               letterSpacing: '5px', lineHeight: 1,
-              background: 'linear-gradient(90deg, #ffffff 0%, #e2e8f0 100%)',
+              background: 'linear-gradient(90deg, #6b7280 0%, #ffffff 50%, #6b7280 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               textShadow: '0 10px 30px rgba(255,255,255,0.1)'
